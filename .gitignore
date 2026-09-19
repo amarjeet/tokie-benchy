@@ -1,0 +1,25 @@
+# secrets / local config
+.env
+.env.*
+!.env.example
+
+# python
+__pycache__/
+*.py[cod]
+.venv/
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# benchmark output
+results/
+*.json
+!uv.lock
+
+# editors / os
+.idea/
+.vscode/
+.DS_Store

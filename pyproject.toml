@@ -1,0 +1,24 @@
+[project]
+name = "tokie-benchy"
+version = "0.1.0"
+description = "Token throughput and latency benchmarking CLI/TUI for OpenAI-compatible endpoints"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "httpx>=0.27",
+    "typer>=0.12",
+    "textual>=0.86",
+    "textual-plotext>=1.0",
+    "python-dotenv>=1.0",
+    "rich>=13",
+]
+
+[project.scripts]
+tokie-benchy = "tokie_benchy.cli:app"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/tokie_benchy"]
